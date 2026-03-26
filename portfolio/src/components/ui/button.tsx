@@ -6,23 +6,23 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-[calc(var(--radius-xl)-4px)] text-sm font-medium transition-all duration-200 active:translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:pointer-events-none disabled:opacity-60",
+  "inline-flex items-center justify-center gap-2 rounded-none border-2 text-sm font-mono font-semibold uppercase tracking-[0.18em] transition duration-75 active:translate-x-[4px] active:translate-y-[4px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--border)] disabled:pointer-events-none disabled:opacity-60",
   {
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-glow)] hover:-translate-y-0.5",
+          "border-[#739518] bg-[#262826] text-[#739518] shadow-[4px_4px_0_0_#739518] hover:bg-[#739518] hover:text-[#262826] active:shadow-none",
         outline:
-          "border border-border bg-transparent text-foreground hover:-translate-y-0.5 hover:bg-foreground/5",
+          "border-[#4E5245] bg-transparent text-[#A2A989] shadow-[4px_4px_0_0_#4E5245] hover:bg-[#4E5245]/30 hover:text-[#A2A989] active:shadow-none",
         ghost:
-          "text-foreground hover:bg-foreground/5 active:bg-foreground/10",
+          "border-transparent bg-transparent text-[#A2A989] hover:bg-[#4E5245]/30 active:shadow-none",
         subtle:
-          "glass-button text-foreground shadow-[var(--shadow-card)] hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]",
+          "glass-button text-[#A2A989] shadow-[4px_4px_0_0_#4E5245] hover:bg-[#4E5245]/30 active:shadow-none",
       },
       size: {
-        default: "h-11 px-5",
+        default: "h-11 px-6",
         sm: "h-9 px-4 text-xs",
-        lg: "h-12 px-6 text-base",
+        lg: "h-12 px-7 text-base",
         icon: "h-10 w-10",
       },
     },
